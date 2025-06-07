@@ -1,0 +1,1560 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.48+45 (git sha1 8acc77c1e, clang++ 18.1.8 -fPIC -O3)
+
+-- Running command `read -define SYNTH' --
+
+-- Parsing `src/_tt_fpga_top.v' using frontend ` -vlog2k' --
+
+1. Executing Verilog-2005 frontend: src/_tt_fpga_top.v
+Parsing Verilog input from `src/_tt_fpga_top.v' to AST representation.
+Storing AST representation for module `$abstract\tt_fpga_top'.
+Successfully finished Verilog frontend.
+
+-- Parsing `/home/uri/p/tinyqv-edge-counter-peripheral/src/project.v' using frontend ` -vlog2k' --
+
+2. Executing Verilog-2005 frontend: /home/uri/p/tinyqv-edge-counter-peripheral/src/project.v
+Parsing Verilog input from `/home/uri/p/tinyqv-edge-counter-peripheral/src/project.v' to AST representation.
+Storing AST representation for module `$abstract\tt_um_edge_counter'.
+Successfully finished Verilog frontend.
+
+-- Parsing `/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v' using frontend ` -vlog2k' --
+
+3. Executing Verilog-2005 frontend: /home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v
+Parsing Verilog input from `/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v' to AST representation.
+Storing AST representation for module `$abstract\tqvp_edge_counter'.
+Successfully finished Verilog frontend.
+
+-- Running command `synth_ice40 -top tt_fpga_top -json /home/uri/p/tinyqv-edge-counter-peripheral/build/tt_fpga.json' --
+
+4. Executing SYNTH_ICE40 pass.
+
+4.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Generating RTLIL representation for module `\ICESTORM_RAM'.
+Successfully finished Verilog frontend.
+
+4.2. Executing HIERARCHY pass (managing design hierarchy).
+
+4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\tt_fpga_top'.
+Generating RTLIL representation for module `\tt_fpga_top'.
+
+4.3.1. Analyzing design hierarchy..
+Top module:  \tt_fpga_top
+
+4.3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\tt_um_edge_counter'.
+Generating RTLIL representation for module `\tt_um_edge_counter'.
+
+4.3.3. Analyzing design hierarchy..
+Top module:  \tt_fpga_top
+Used module:     \tt_um_edge_counter
+
+4.3.4. Executing AST frontend in derive mode using pre-parsed AST for module `\tqvp_edge_counter'.
+Generating RTLIL representation for module `\tqvp_edge_counter'.
+
+4.3.5. Analyzing design hierarchy..
+Top module:  \tt_fpga_top
+Used module:     \tt_um_edge_counter
+Used module:         \tqvp_edge_counter
+
+4.3.6. Analyzing design hierarchy..
+Top module:  \tt_fpga_top
+Used module:     \tt_um_edge_counter
+Used module:         \tqvp_edge_counter
+Removing unused module `$abstract\tqvp_edge_counter'.
+Removing unused module `$abstract\tt_um_edge_counter'.
+Removing unused module `$abstract\tt_fpga_top'.
+Removed 3 unused modules.
+
+4.4. Executing PROC pass (convert processes to netlists).
+
+4.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$241 in module SB_DFFNES.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$234 in module SB_DFFNESS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$230 in module SB_DFFNER.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$223 in module SB_DFFNESR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$220 in module SB_DFFNS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$217 in module SB_DFFNSS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$214 in module SB_DFFNR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$211 in module SB_DFFNSR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$203 in module SB_DFFES.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$196 in module SB_DFFESS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$192 in module SB_DFFER.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$185 in module SB_DFFESR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$182 in module SB_DFFS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$179 in module SB_DFFSS.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$176 in module SB_DFFR.
+Marked 1 switch rules as full_case in process $proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$173 in module SB_DFFSR.
+Marked 1 switch rules as full_case in process $proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:83$400 in module tqvp_edge_counter.
+Marked 1 switch rules as full_case in process $proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:45$387 in module tqvp_edge_counter.
+Removed a total of 0 dead cases.
+
+4.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 9 redundant assignments.
+Promoted 23 assignments to connections.
+
+4.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$244'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$240'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$233'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$229'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$222'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$219'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$216'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$213'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$210'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$208'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$206'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$202'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$195'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$191'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$184'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$181'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$178'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$175'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$172'.
+  Set init value: \Q = 1'0
+Found init rule in `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$170'.
+  Set init value: \Q = 1'0
+
+4.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \S in `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$241'.
+Found async reset \R in `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$230'.
+Found async reset \S in `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$220'.
+Found async reset \R in `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$214'.
+Found async reset \S in `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$203'.
+Found async reset \R in `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$192'.
+Found async reset \S in `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$182'.
+Found async reset \R in `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$176'.
+
+4.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~23 debug messages>
+
+4.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$244'.
+Creating decoders for process `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$241'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$240'.
+Creating decoders for process `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$234'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$233'.
+Creating decoders for process `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$230'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$229'.
+Creating decoders for process `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$223'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$222'.
+Creating decoders for process `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$220'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$219'.
+Creating decoders for process `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$217'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$216'.
+Creating decoders for process `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$214'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$213'.
+Creating decoders for process `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$211'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$210'.
+Creating decoders for process `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$209'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$208'.
+Creating decoders for process `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$207'.
+Creating decoders for process `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$206'.
+Creating decoders for process `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$203'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$202'.
+Creating decoders for process `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$196'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$195'.
+Creating decoders for process `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$192'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$191'.
+Creating decoders for process `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$185'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$184'.
+Creating decoders for process `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$182'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$181'.
+Creating decoders for process `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$179'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$178'.
+Creating decoders for process `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$176'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$175'.
+Creating decoders for process `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$173'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$172'.
+Creating decoders for process `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$171'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$170'.
+Creating decoders for process `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:271$169'.
+Creating decoders for process `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:83$400'.
+     1/1: $1\seg[6:0]
+Creating decoders for process `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:45$387'.
+     1/3: $0\ui0_prev[0:0]
+     2/3: $0\cfg[1:0]
+     3/3: $0\counter[7:0]
+
+4.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\tqvp_edge_counter.\seg' from process `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:83$400'.
+
+4.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\SB_DFFNES.\Q' using process `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$241'.
+  created $adff cell `$procdff$476' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESS.\Q' using process `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$234'.
+  created $dff cell `$procdff$477' with negative edge clock.
+Creating register for signal `\SB_DFFNER.\Q' using process `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$230'.
+  created $adff cell `$procdff$480' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESR.\Q' using process `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$223'.
+  created $dff cell `$procdff$481' with negative edge clock.
+Creating register for signal `\SB_DFFNS.\Q' using process `\SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$220'.
+  created $adff cell `$procdff$484' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSS.\Q' using process `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$217'.
+  created $dff cell `$procdff$485' with negative edge clock.
+Creating register for signal `\SB_DFFNR.\Q' using process `\SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$214'.
+  created $adff cell `$procdff$488' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSR.\Q' using process `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$211'.
+  created $dff cell `$procdff$489' with negative edge clock.
+Creating register for signal `\SB_DFFNE.\Q' using process `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$209'.
+  created $dff cell `$procdff$490' with negative edge clock.
+Creating register for signal `\SB_DFFN.\Q' using process `\SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$207'.
+  created $dff cell `$procdff$491' with negative edge clock.
+Creating register for signal `\SB_DFFES.\Q' using process `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$203'.
+  created $adff cell `$procdff$494' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESS.\Q' using process `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$196'.
+  created $dff cell `$procdff$495' with positive edge clock.
+Creating register for signal `\SB_DFFER.\Q' using process `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$192'.
+  created $adff cell `$procdff$498' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESR.\Q' using process `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$185'.
+  created $dff cell `$procdff$499' with positive edge clock.
+Creating register for signal `\SB_DFFS.\Q' using process `\SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$182'.
+  created $adff cell `$procdff$502' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSS.\Q' using process `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$179'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `\SB_DFFR.\Q' using process `\SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$176'.
+  created $adff cell `$procdff$506' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSR.\Q' using process `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$173'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `\SB_DFFE.\Q' using process `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$171'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `\SB_DFF.\Q' using process `\SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:271$169'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `\tqvp_edge_counter.\counter' using process `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:45$387'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `\tqvp_edge_counter.\cfg' using process `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:45$387'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `\tqvp_edge_counter.\ui0_prev' using process `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:45$387'.
+  created $dff cell `$procdff$512' with positive edge clock.
+
+4.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$244'.
+Found and cleaned up 1 empty switch in `\SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$241'.
+Removing empty process `SB_DFFNES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1414$241'.
+Removing empty process `SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$240'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$234'.
+Removing empty process `SB_DFFNESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1353$234'.
+Removing empty process `SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$233'.
+Found and cleaned up 1 empty switch in `\SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$230'.
+Removing empty process `SB_DFFNER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1273$230'.
+Removing empty process `SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$229'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$223'.
+Removing empty process `SB_DFFNESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1212$223'.
+Removing empty process `SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$222'.
+Removing empty process `SB_DFFNS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1138$220'.
+Removing empty process `SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$219'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$217'.
+Removing empty process `SB_DFFNSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1088$217'.
+Removing empty process `SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$216'.
+Removing empty process `SB_DFFNR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1017$214'.
+Removing empty process `SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$213'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$211'.
+Removing empty process `SB_DFFNSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:967$211'.
+Removing empty process `SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$210'.
+Found and cleaned up 1 empty switch in `\SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$209'.
+Removing empty process `SB_DFFNE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:922$209'.
+Removing empty process `SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$208'.
+Removing empty process `SB_DFFN.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$207'.
+Removing empty process `SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$206'.
+Found and cleaned up 1 empty switch in `\SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$203'.
+Removing empty process `SB_DFFES.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:803$203'.
+Removing empty process `SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$202'.
+Found and cleaned up 2 empty switches in `\SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$196'.
+Removing empty process `SB_DFFESS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:742$196'.
+Removing empty process `SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$195'.
+Found and cleaned up 1 empty switch in `\SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$192'.
+Removing empty process `SB_DFFER.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:662$192'.
+Removing empty process `SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$191'.
+Found and cleaned up 2 empty switches in `\SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$185'.
+Removing empty process `SB_DFFESR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:601$185'.
+Removing empty process `SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$184'.
+Removing empty process `SB_DFFS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:527$182'.
+Removing empty process `SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$181'.
+Found and cleaned up 1 empty switch in `\SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$179'.
+Removing empty process `SB_DFFSS.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:477$179'.
+Removing empty process `SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$178'.
+Removing empty process `SB_DFFR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:406$176'.
+Removing empty process `SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$175'.
+Found and cleaned up 1 empty switch in `\SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$173'.
+Removing empty process `SB_DFFSR.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:356$173'.
+Removing empty process `SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$172'.
+Found and cleaned up 1 empty switch in `\SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$171'.
+Removing empty process `SB_DFFE.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:311$171'.
+Removing empty process `SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$170'.
+Removing empty process `SB_DFF.$proc$/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:271$169'.
+Found and cleaned up 1 empty switch in `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:83$400'.
+Removing empty process `tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:83$400'.
+Found and cleaned up 5 empty switches in `\tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:45$387'.
+Removing empty process `tqvp_edge_counter.$proc$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:45$387'.
+Cleaned up 24 empty switches.
+
+4.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tqvp_edge_counter.
+<suppressed ~3 debug messages>
+Optimizing module tt_um_edge_counter.
+<suppressed ~1 debug messages>
+Optimizing module tt_fpga_top.
+
+4.5. Executing FLATTEN pass (flatten design).
+Deleting now unused module tqvp_edge_counter.
+Deleting now unused module tt_um_edge_counter.
+<suppressed ~2 debug messages>
+
+4.6. Executing TRIBUF pass.
+
+4.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 1 unused cells and 19 unused wires.
+<suppressed ~2 debug messages>
+
+4.10. Executing CHECK pass (checking for obvious problems).
+Checking module tt_fpga_top...
+Found and reported 0 problems.
+
+4.11. Executing OPT pass (performing simple optimizations).
+
+4.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+4.11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+4.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+4.11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+4.11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.11.16. Finished OPT passes. (There is nothing left to do.)
+
+4.12. Executing FSM pass (extract and optimize FSM).
+
+4.12.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+4.12.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+4.12.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.12.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.12.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+4.12.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+4.12.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+4.13. Executing OPT pass (performing simple optimizations).
+
+4.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+4.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\user_project.\edge_counter_inst.$procdff$511 ($dff) from module tt_fpga_top (D = $flatten\user_project.\edge_counter_inst.$procmux$455_Y, Q = \user_project.edge_counter_inst.cfg, rval = 2'00).
+Adding EN signal on $auto$ff.cc:266:slice$515 ($sdff) from module tt_fpga_top (D = \uio_in [1:0], Q = \user_project.edge_counter_inst.cfg).
+Adding SRST signal on $flatten\user_project.\edge_counter_inst.$procdff$510 ($dff) from module tt_fpga_top (D = $flatten\user_project.\edge_counter_inst.$procmux$469_Y, Q = \user_project.edge_counter_inst.counter, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$519 ($sdff) from module tt_fpga_top (D = $flatten\user_project.\edge_counter_inst.$procmux$469_Y, Q = \user_project.edge_counter_inst.counter).
+
+4.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 4 unused cells and 4 unused wires.
+<suppressed ~5 debug messages>
+
+4.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+<suppressed ~1 debug messages>
+
+4.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+4.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.13.16. Finished OPT passes. (There is nothing left to do.)
+
+4.14. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 address bits (of 32) from memory init port tt_fpga_top.$flatten\user_project.\edge_counter_inst.$auto$mem.cc:328:emit$405 ($flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403).
+Removed top 7 bits (of 8) from port B of cell tt_fpga_top.$flatten\user_project.\edge_counter_inst.$add$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:55$389 ($add).
+Removed top 1 bits (of 2) from port B of cell tt_fpga_top.$flatten\user_project.\edge_counter_inst.$eq$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:63$390 ($eq).
+Removed top 5 bits (of 6) from port B of cell tt_fpga_top.$auto$opt_dff.cc:195:make_patterns_logic$524 ($ne).
+Removed top 2 bits (of 4) from port B of cell tt_fpga_top.$flatten\user_project.\edge_counter_inst.$eq$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:75$396 ($eq).
+Removed top 2 bits (of 4) from port B of cell tt_fpga_top.$flatten\user_project.\edge_counter_inst.$eq$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:76$397 ($eq).
+Removed top 6 bits (of 8) from mux cell tt_fpga_top.$flatten\user_project.\edge_counter_inst.$ternary$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:76$398 ($mux).
+Removed top 4 bits (of 8) from port B of cell tt_fpga_top.$flatten\user_project.\edge_counter_inst.$gt$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:105$401 ($gt).
+Removed top 3 bits (of 4) from port B of cell tt_fpga_top.$flatten\user_project.\edge_counter_inst.$procmux$463_CMP0 ($eq).
+Removed top 6 bits (of 8) from wire tt_fpga_top.$flatten\user_project.\edge_counter_inst.$ternary$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:76$398_Y.
+
+4.15. Executing PEEPOPT pass (run peephole optimizers).
+
+4.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+4.17. Executing SHARE pass (SAT-based resource sharing).
+
+4.18. Executing TECHMAP pass (map to technology primitives).
+
+4.18.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+4.18.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~36 debug messages>
+
+4.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.20. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.21. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module tt_fpga_top:
+  creating $macc model for $flatten\user_project.\edge_counter_inst.$add$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:55$389 ($add).
+  creating $alu model for $macc $flatten\user_project.\edge_counter_inst.$add$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:55$389.
+  creating $alu model for $flatten\user_project.\edge_counter_inst.$gt$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:105$401 ($gt): new $alu
+  creating $alu cell for $flatten\user_project.\edge_counter_inst.$gt$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:105$401: $auto$alumacc.cc:485:replace_alu$530
+  creating $alu cell for $flatten\user_project.\edge_counter_inst.$add$/home/uri/p/tinyqv-edge-counter-peripheral/src/tqvp_edge_counter.v:55$389: $auto$alumacc.cc:485:replace_alu$535
+  created 2 $alu and 0 $macc cells.
+
+4.22. Executing OPT pass (performing simple optimizations).
+
+4.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+4.22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.22.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+4.22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.22.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.22.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+4.22.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.22.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.22.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.22.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.22.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.22.16. Finished OPT passes. (There is nothing left to do.)
+
+4.23. Executing MEMORY pass.
+
+4.23.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+4.23.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+4.23.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+4.23.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+4.23.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403'[0] in module `\tt_fpga_top': no output FF found.
+Checking read port address `$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403'[0] in module `\tt_fpga_top': merged address FF to cell.
+
+4.23.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.23.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+4.23.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+4.23.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.23.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.25. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+using FF mapping for memory tt_fpga_top.$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403
+<suppressed ~52 debug messages>
+
+4.26. Executing TECHMAP pass (map to technology primitives).
+
+4.26.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/brams_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_RAM4K_'.
+Successfully finished Verilog frontend.
+
+4.26.2. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/spram_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/spram_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_SPRAM_'.
+Successfully finished Verilog frontend.
+
+4.26.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+4.27. Executing ICE40_BRAMINIT pass.
+
+4.28. Executing OPT pass (performing simple optimizations).
+
+4.28.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+<suppressed ~3 debug messages>
+
+4.28.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.28.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 4 unused cells and 5 unused wires.
+<suppressed ~5 debug messages>
+
+4.28.5. Finished fast OPT passes.
+
+4.29. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403 in module \tt_fpga_top:
+  created 16 $dff cells and 0 static cells of width 7.
+Extracted data FF from read port 0 of tt_fpga_top.$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403: $$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 0 write mux blocks.
+
+4.30. Executing OPT pass (performing simple optimizations).
+
+4.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+4.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][6]$611:
+      Old ports: A=7'0111001, B=7'1011110, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591 [1:0]
+      New connections: $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591 [6:2] = { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591 [1:0] 2'11 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591 [1] }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][5]$608:
+      Old ports: A=7'1110111, B=7'1111100, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589 [0] }
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589 [6:4] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589 [2:1] } = { 4'1111 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][4]$605:
+      Old ports: A=7'1111111, B=7'1101111, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$a$588
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$a$588 [4]
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$a$588 [6:5] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$a$588 [3:0] } = 6'111111
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][3]$602:
+      Old ports: A=7'1111101, B=7'0000111, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [1] }
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [6:4] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [2] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [0] } = { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [3] 2'11 }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][2]$599:
+      Old ports: A=7'1100110, B=7'1101101, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$a$585
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$a$585 [1:0]
+      New connections: $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$a$585 [6:2] = { 3'110 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$a$585 [0] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][1]$596:
+      Old ports: A=7'1011011, B=7'1001111, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583 [4] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583 [2] }
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583 [6:5] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583 [1:0] } = 5'10111
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][0]$593:
+      Old ports: A=7'0111111, B=7'0000110, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [0]
+      New connections: $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [6:1] = { 1'0 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [0] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [0] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [0] 2'11 }
+    Consolidated identical input bits for $mux cell $flatten\user_project.$ternary$/home/uri/p/tinyqv-edge-counter-peripheral/src/project.v:20$381:
+      Old ports: A=8'00000000, B=8'11111111, Y=\uio_oe
+      New ports: A=1'0, B=1'1, Y=\uio_oe [0]
+      New connections: \uio_oe [7:1] = { \uio_oe [0] \uio_oe [0] \uio_oe [0] \uio_oe [0] \uio_oe [0] \uio_oe [0] \uio_oe [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][3][7]$614:
+      Old ports: A=7'1111001, B=7'1110001, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$b$592
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$b$592 [3]
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$b$592 [6:4] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$b$592 [2:0] } = 6'111001
+  Optimizing cells in module \tt_fpga_top.
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$590:
+      Old ports: A=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591, B=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$b$592, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580
+      New ports: A={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591 [1] 1'1 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$a$591 [1:0] }, B={ 1'1 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][3]$b$592 [3] 2'01 }, Y={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580 [6] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580 [1:0] }
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580 [5:4] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580 [2] } = { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580 [0] 1'1 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$b$580 [1] }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$587:
+      Old ports: A=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$a$588, B=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$a$579
+      New ports: A={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$a$588 [4] 2'11 }, B={ 1'1 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][2]$b$589 [0] }, Y={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$a$579 [4:3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$a$579 [0] }
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$a$579 [6:5] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$a$579 [2:1] } = { 3'111 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][1]$a$579 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$584:
+      Old ports: A=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$a$585, B=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$b$577
+      New ports: A={ 2'10 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$a$585 [0] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$a$585 [1:0] }, B={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][1]$b$586 [1] 1'1 }, Y={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$b$577 [5:3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$b$577 [1:0] }
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$b$577 [6] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$b$577 [2] } = { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$b$577 [5] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$581:
+      Old ports: A=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582, B=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583, Y=$memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$a$576
+      New ports: A={ 1'0 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [0] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [0] 1'1 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$a$582 [0] }, B={ 2'10 $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583 [4] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][2][0]$b$583 [2] 1'1 }, Y={ $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$a$576 [6:4] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$a$576 [2] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$a$576 [0] }
+      New connections: { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$a$576 [3] $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$a$576 [1] } = { $memory$flatten\user_project.\edge_counter_inst.$auto$proc_rom.cc:155:do_switch$403$rdmux[0][1][0]$a$576 [0] 1'1 }
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 13 changes.
+
+4.30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+4.30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 0 unused cells and 21 unused wires.
+<suppressed ~1 debug messages>
+
+4.30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.30.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.30.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+4.30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.30.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.30.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.30.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.30.16. Finished OPT passes. (There is nothing left to do.)
+
+4.31. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+4.32. Executing TECHMAP pass (map to technology primitives).
+
+4.32.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+4.32.2. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+4.32.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_80_ice40_alu for cells of type $alu.
+Using template $paramod$6b90a16b6f3b57b9c9d958838204f952a01dc262\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$fc16b9f758000d363d24f130038bd99b46b4fa1b\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $reduce_or.
+No more expansions possible.
+<suppressed ~187 debug messages>
+
+4.33. Executing OPT pass (performing simple optimizations).
+
+4.33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+<suppressed ~60 debug messages>
+
+4.33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+<suppressed ~54 debug messages>
+Removed a total of 18 cells.
+
+4.33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 4 unused cells and 87 unused wires.
+<suppressed ~5 debug messages>
+
+4.33.5. Finished fast OPT passes.
+
+4.34. Executing ICE40_OPT pass (performing simple optimizations).
+
+4.34.1. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) tt_fpga_top.$auto$alumacc.cc:485:replace_alu$530.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$530.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) tt_fpga_top.$auto$alumacc.cc:485:replace_alu$535.slice[0].carry: CO=\user_project.edge_counter_inst.counter [0]
+
+4.34.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+<suppressed ~1 debug messages>
+
+4.34.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.34.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.34.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+4.34.6. Rerunning OPT passes. (Removed registers in this run.)
+
+4.34.7. Running ICE40 specific optimizations.
+
+4.34.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.34.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.34.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.34.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.34.12. Finished OPT passes. (There is nothing left to do.)
+
+4.35. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+4.36. Executing TECHMAP pass (map to technology primitives).
+
+4.36.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+4.36.2. Continuing TECHMAP pass.
+Using template \$_DFF_P_ for cells of type $_DFF_P_.
+Using template \$_SDFFCE_PP0P_ for cells of type $_SDFFCE_PP0P_.
+No more expansions possible.
+<suppressed ~40 debug messages>
+
+4.37. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.38. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping tt_fpga_top.$auto$alumacc.cc:485:replace_alu$535.slice[0].carry ($lut).
+
+4.39. Executing ICE40_OPT pass (performing simple optimizations).
+
+4.39.1. Running ICE40 specific optimizations.
+
+4.39.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+<suppressed ~31 debug messages>
+
+4.39.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+<suppressed ~51 debug messages>
+Removed a total of 17 cells.
+
+4.39.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.39.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 0 unused cells and 113 unused wires.
+<suppressed ~1 debug messages>
+
+4.39.6. Rerunning OPT passes. (Removed registers in this run.)
+
+4.39.7. Running ICE40 specific optimizations.
+
+4.39.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.39.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.39.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.39.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.39.12. Finished OPT passes. (There is nothing left to do.)
+
+4.40. Executing TECHMAP pass (map to technology primitives).
+
+4.40.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/latches_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+4.40.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+4.41. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ICE40_CARRY_WRAPPER'.
+Successfully finished Verilog frontend.
+
+4.42. Executing ABC9 pass.
+
+4.42.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+4.42.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+4.42.3. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module tt_fpga_top.
+Found 0 SCCs.
+
+4.42.4. Executing ABC9_OPS pass (helper functions for ABC9).
+
+4.42.5. Executing PROC pass (convert processes to netlists).
+
+4.42.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.42.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.42.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+4.42.5.4. Executing PROC_INIT pass (extract init attributes).
+
+4.42.5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.42.5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.42.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+4.42.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.42.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.42.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.42.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.42.5.12. Executing OPT_EXPR pass (perform const folding).
+
+4.42.6. Executing TECHMAP pass (map to technology primitives).
+
+4.42.6.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+4.42.6.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~126 debug messages>
+
+4.42.7. Executing OPT pass (performing simple optimizations).
+
+4.42.7.1. Executing OPT_EXPR pass (perform const folding).
+
+4.42.7.2. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+4.42.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Removed 0 multiplexer ports.
+
+4.42.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Performed a total of 0 changes.
+
+4.42.7.5. Executing OPT_MERGE pass (detect identical cells).
+Removed a total of 0 cells.
+
+4.42.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.42.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+
+4.42.7.8. Executing OPT_EXPR pass (perform const folding).
+
+4.42.7.9. Finished OPT passes. (There is nothing left to do.)
+
+4.42.8. Executing TECHMAP pass (map to technology primitives).
+
+4.42.8.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/abc9_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+4.42.8.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+4.42.9. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/abc9_model.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+4.42.10. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~30 debug messages>
+
+4.42.11. Executing ABC9_OPS pass (helper functions for ABC9).
+
+4.42.12. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+4.42.13. Executing TECHMAP pass (map to technology primitives).
+
+4.42.13.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+4.42.13.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+Using template SB_CARRY for cells of type SB_CARRY.
+Using template $paramod\SB_LUT4\LUT_INIT=16'0110100110010110 for cells of type SB_LUT4.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~147 debug messages>
+
+4.42.14. Executing OPT pass (performing simple optimizations).
+
+4.42.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+<suppressed ~4 debug messages>
+
+4.42.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+<suppressed ~29 debug messages>
+Removed a total of 12 cells.
+
+4.42.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+4.42.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.42.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.42.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.42.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~1 debug messages>
+
+4.42.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.42.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.42.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tt_fpga_top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+4.42.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tt_fpga_top.
+Performed a total of 0 changes.
+
+4.42.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tt_fpga_top'.
+Removed a total of 0 cells.
+
+4.42.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.42.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tt_fpga_top..
+
+4.42.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tt_fpga_top.
+
+4.42.14.16. Finished OPT passes. (There is nothing left to do.)
+
+4.42.15. Executing AIGMAP pass (map logic to AIG).
+Module tt_fpga_top: replaced 7 cells with 43 new cells, skipped 11 cells.
+  replaced 2 cell types:
+       2 $_OR_
+       5 $_MUX_
+  not replaced 3 cell types:
+       8 $specify2
+       1 $_NOT_
+       2 $_AND_
+
+4.42.16. Executing AIGMAP pass (map logic to AIG).
+Module tt_fpga_top: replaced 88 cells with 515 new cells, skipped 122 cells.
+  replaced 3 cell types:
+      31 $_OR_
+       2 $_ORNOT_
+      55 $_MUX_
+  not replaced 9 cell types:
+       2 $scopeinfo
+      21 $_NOT_
+      35 $_AND_
+       8 SB_IO
+       8 SB_DFF
+      10 SB_DFFESR
+      10 $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1
+      18 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000000010101
+      10 $paramod$__ABC9_DELAY\DELAY=32'00000000000000000000000011001011
+
+4.42.16.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+4.42.16.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+4.42.16.3. Executing XAIGER backend.
+<suppressed ~29 debug messages>
+Extracted 233 AND gates and 700 wires from module `tt_fpga_top' to a netlist network with 44 inputs and 54 outputs.
+
+4.42.16.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+4.42.16.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     44/     54  and =     193  lev =   18 (1.78)  mem = 0.01 MB  box = 38  bb = 28
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     44/     54  and =     180  lev =   13 (1.30)  mem = 0.01 MB  ch =   30  box = 38  bb = 28
+ABC: + &if -W 250 -v 
+ABC: K = 4. Memory (bytes): Truth =    0. Cut =   52. Obj =  136. Set =  564. CutMin = no
+ABC: Node =     180.  Ch =    30.  Total mem =    0.06 MB. Peak cut mem =    0.02 MB.
+ABC: P:  Del = 3105.00.  Ar =      44.0.  Edge =      169.  Cut =     1127.  T =     0.00 sec
+ABC: P:  Del = 3105.00.  Ar =      44.0.  Edge =      170.  Cut =     1098.  T =     0.00 sec
+ABC: P:  Del = 3105.00.  Ar =      42.0.  Edge =      141.  Cut =     1164.  T =     0.00 sec
+ABC: F:  Del = 3105.00.  Ar =      42.0.  Edge =      142.  Cut =      742.  T =     0.00 sec
+ABC: A:  Del = 3105.00.  Ar =      42.0.  Edge =      138.  Cut =      736.  T =     0.00 sec
+ABC: A:  Del = 3105.00.  Ar =      42.0.  Edge =      138.  Cut =      736.  T =     0.00 sec
+ABC: Total time =     0.00 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: The network is not changed by "&mfs".
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =     44/     54  and =     164  lev =   13 (1.30)  mem = 0.01 MB  box = 38  bb = 28
+ABC: Mapping (K=4)  :  lut =     42  edge =     138  lev =    5 (0.63)  levB =    9  mem = 0.00 MB
+ABC: LUT = 42 : 2=13 31.0 %  3=4 9.5 %  4=25 59.5 %  Ave = 3.29
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + time 
+ABC: elapse: 0.03 seconds, total: 0.03 seconds
+
+4.42.16.6. Executing AIGER frontend.
+<suppressed ~208 debug messages>
+Removed 217 unused cells and 435 unused wires.
+
+4.42.16.7. Executing ABC9_OPS pass (helper functions for ABC9).
+ABC RESULTS:              $lut cells:       48
+ABC RESULTS:   $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 cells:       10
+ABC RESULTS:           input signals:        8
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+4.42.17. Executing TECHMAP pass (map to technology primitives).
+
+4.42.17.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `\$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `\$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+4.42.17.2. Continuing TECHMAP pass.
+Using template $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1 for cells of type $paramod$__ICE40_CARRY_WRAPPER\LUT=16'0110100110010110\I3_IS_CI=1'1.
+No more expansions possible.
+<suppressed ~16 debug messages>
+
+4.43. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+4.44. Executing TECHMAP pass (map to technology primitives).
+
+4.44.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+4.44.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~22 debug messages>
+Removed 18 unused cells and 783 unused wires.
+
+4.45. Executing OPT_LUT pass (optimize LUTs).
+Discovering LUTs.
+Number of LUTs:       55
+  1-LUT                6
+  2-LUT               14
+  3-LUT               10
+  4-LUT               25
+  with \SB_CARRY    (#0)    6
+  with \SB_CARRY    (#1)    6
+
+Eliminating LUTs.
+Number of LUTs:       55
+  1-LUT                6
+  2-LUT               14
+  3-LUT               10
+  4-LUT               25
+  with \SB_CARRY    (#0)    6
+  with \SB_CARRY    (#1)    6
+
+Combining LUTs.
+Number of LUTs:       55
+  1-LUT                6
+  2-LUT               14
+  3-LUT               10
+  4-LUT               25
+  with \SB_CARRY    (#0)    6
+  with \SB_CARRY    (#1)    6
+
+Eliminated 0 LUTs.
+Combined 0 LUTs.
+<suppressed ~206 debug messages>
+
+4.46. Executing TECHMAP pass (map to technology primitives).
+
+4.46.1. Executing Verilog-2005 frontend: /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `/opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+4.46.2. Continuing TECHMAP pass.
+Using template $paramod$101238f3d8d49ab12a9b49a2f01cd503b26e9c61\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod$364c9ffbffac467d60dfec81bba4e18476c15602\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01110000 for cells of type $lut.
+Using template $paramod$e11c5b5e5fdcdb81848f9e3d37d691709274aa0d\$lut for cells of type $lut.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
+Using template $paramod$1c7f32d383ef449f73413f566f4b6cda4b382a7d\$lut for cells of type $lut.
+Using template $paramod$d0f306691df97203f0b526c4aab3546561aeae7d\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$5b4b4ed558983d9f3ab4c896a7a011d129b0db9a\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11010101 for cells of type $lut.
+Using template $paramod$5dc745bb48e2cf535179547ba13f0fe5364d6d54\$lut for cells of type $lut.
+Using template $paramod$6b627c1b00dec8d8badce34f5291473f74490d8b\$lut for cells of type $lut.
+Using template $paramod$645fb0d02944b9f8469a4c445a639b7bb41612d8\$lut for cells of type $lut.
+Using template $paramod$852abd750d09ce2a6140e6848d483a9527eb522c\$lut for cells of type $lut.
+Using template $paramod$6e6f938700bca469d3fff94cc6441131e53b3289\$lut for cells of type $lut.
+Using template $paramod$b18ce7c8c8d4318b9d59e821bede79610426ed03\$lut for cells of type $lut.
+Using template $paramod$14dd836aee2824f773a5a7da84fb3eb082cc3026\$lut for cells of type $lut.
+Using template $paramod$d39303868c18cd27393e25f5d3fc3cbfa0034e48\$lut for cells of type $lut.
+Using template $paramod$4dd6dbf003a364bef865167186e4cb5d88687415\$lut for cells of type $lut.
+Using template $paramod$fd6880204211540760e23148e0a0feab4572ebfc\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0111 for cells of type $lut.
+No more expansions possible.
+<suppressed ~396 debug messages>
+Removed 0 unused cells and 121 unused wires.
+
+4.47. Executing AUTONAME pass.
+Renamed 583 objects in module tt_fpga_top (20 iterations).
+<suppressed ~126 debug messages>
+
+4.48. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `tt_fpga_top'. Setting top module to tt_fpga_top.
+
+4.48.1. Analyzing design hierarchy..
+Top module:  \tt_fpga_top
+
+4.48.2. Analyzing design hierarchy..
+Top module:  \tt_fpga_top
+Removed 0 unused modules.
+
+4.49. Printing statistics.
+
+=== tt_fpga_top ===
+
+   Number of wires:                 74
+   Number of wire bits:            243
+   Number of public wires:          74
+   Number of public wire bits:     243
+   Number of ports:                  5
+   Number of port bits:             26
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 92
+     $scopeinfo                      2
+     SB_CARRY                        9
+     SB_DFF                          8
+     SB_DFFESR                      10
+     SB_IO                           8
+     SB_LUT4                        55
+
+4.50. Executing CHECK pass (checking for obvious problems).
+Checking module tt_fpga_top...
+Found and reported 0 problems.
+
+4.51. Executing JSON backend.
+
+End of script. Logfile hash: d0367a31aa, CPU: user 0.59s system 0.04s, MEM: 28.13 MB peak
+Yosys 0.48+45 (git sha1 8acc77c1e, clang++ 18.1.8 -fPIC -O3)
+Time spent: 51% 25x read_verilog (0 sec), 7% 1x abc9_exe (0 sec), ...
